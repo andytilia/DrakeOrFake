@@ -7,8 +7,10 @@ var Drake;
 var img;
 
 function preload() {
-  for (var i = 1; i < 21; i++) {
-    images[i] = loadImage(i + ".jpg");
+  for (var i = 1; i <= 21; i++) {
+    img = loadImage(i + ".jpg");
+    img.resize(400, 0);
+    images[i] = img;
   }  
 }
 
@@ -37,9 +39,9 @@ function draw() {
        gameMode = 2;
      }, 60000);
      DrakeNumber = parseInt(random(1, 21));
-     img = images[DrakeNumber].resize(400, 0);
+     img = images[DrakeNumber];
      image(img, 40, 40);
-     text(DrakeNumber, 200, 200);
+     //text(DrakeNumber, 200, 200);
 
    } else if (gameMode == 2) {
      // display score screen

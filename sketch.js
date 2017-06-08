@@ -38,8 +38,8 @@ function draw() {
        gameMode = 2;
      }, 60000);
      DrakeNumber = parseInt(random(1, 21));
-     img.resize(400, 0);
      img = images[DrakeNumber];
+     img.resize(0, 400);
      image(img, 40, 40);
      //text(DrakeNumber, 200, 200);
 

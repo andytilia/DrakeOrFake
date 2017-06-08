@@ -8,7 +8,7 @@ var img;
 
 function preload() {
   for (var i = 1; i < 21; i++) {
-    images[i] = loadImage(i + ".jpg");
+    images[i] = loadImage(i + ".jpg").resize(400, 0);
   }  
 }
 
@@ -38,7 +38,7 @@ function draw() {
      }, 60000);
      DrakeNumber = parseInt(random(1, 21));
      img = images[DrakeNumber];
-     image(img, 40, 40);
+     image(img, 40, 40, 720, );
      text(DrakeNumber, 200, 200);
 
    } else if (gameMode == 2) {

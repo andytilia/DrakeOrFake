@@ -6,7 +6,7 @@ var t;
 var Drake;
 var img;
 
-function prelaod() {
+function preload() {
   for (var i = 1; i < 21; i++) {
     images[i] = loadImage(i + ".jpg");
   }  

@@ -1,5 +1,5 @@
 var gameMode = 0;  // 0 = welcome screen, 1 = game screen; 2 = score screen; 3 = timeout screen; 4 = youlose
-var images;
+var images = [];
 var DrakeNumber;
 var score = 0;
 var t;

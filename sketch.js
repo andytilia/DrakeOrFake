@@ -14,6 +14,7 @@ function prelaod() {
 
 function setup() {
   createCanvas(800, 600);
+  console.log(images);
   noLoop();
 }
 

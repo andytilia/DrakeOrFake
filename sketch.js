@@ -1,10 +1,16 @@
 var gameMode = 0;  // 0 = welcome screen, 1 = game screen; 2 = score screen; 3 = timeout screen; 4 = youlose
-
+var images;
 var DrakeNumber;
 var score = 0;
 var t;
 var Drake;
 var img;
+
+function prelaod() {
+  for (var i = 1; i < 21; i++) {
+    images[i] = loadImage(i + ".jpg");
+  }  
+}
 
 function setup() {
   createCanvas(800, 600);
@@ -30,7 +36,7 @@ function draw() {
        gameMode = 2;
      }, 60000);
      DrakeNumber = parseInt(random(1, 21));
-     img = loadImage(DrakeNumber + ".jpg");
+     img = images[DrakeNumber];
      image(img, 40, 40);
      text(DrakeNumber, 200, 200);
 
